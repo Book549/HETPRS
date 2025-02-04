@@ -11,7 +11,7 @@
 	<a href="patient_records.php">patient_records</a>
 	
 	<hr>
-	<p>หมายเหตุ pototype ไม่มีการปกป้องข้อมูลและความปลอดภัย หลีกเลี่ยงการกรอกข้อมูลส่วนตัว</p>
+	<p>หมายเหตุ pototype ไม่มีการปกป้องข้อมูลและความปลอดภัย หลีกเลี่ยงการกรอกข้อมูลส่วนตัว <a href="https://github.com/Book549/HETPRS">:soruce_code:</a></p>
 
 </body>
 </html>

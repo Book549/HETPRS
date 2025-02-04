@@ -143,13 +143,20 @@
             "activity" => processCheckboxes("activity"),
             "urgency" => processCheckboxes("urgency")
         ];
+        $isEmpty = empty($data["red"]) && empty($data["orgen"]) && empty($data["activity"]) && empty($data["urgency"]);
+
+        if ($isEmpty) {
+            echo "⚠️ Error: You must select at least one option.";
+            exit();
+        }
+
         $jsonData = json_encode($data, JSON_PRETTY_PRINT);
         $jsonData = mysqli_real_escape_string($conn, $jsonData);
         $result_upload = mysqli_query($conn, "INSERT INTO `patient_records`(`patient_data`) VALUES ('$jsonData')");
         $id_upload = mysqli_insert_id($conn);
         if ($result_upload) {
             mysqli_close($conn);
-            echo '<meta http-equiv="refresh" content="0;url=result_page.php?ID='.$id_upload.'">';
+            echo '<meta http-equiv="refresh" content="0;url=result_page.php?id='.$id_upload.'">';
             exit();
         }
     }

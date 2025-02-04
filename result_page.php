@@ -7,7 +7,7 @@
 </head>
 <body>
 	<h1>สำเร็จ</h1>
-	<?php echo "ID = ".$_GET['ID']; ?>
+	<?php echo "ID = ".$_GET['id']; ?>
 	<hr>
 	<a href="index.php">หน้าหลัก</a>
 	<a href="form.php">กรอกข้อมูลคนไข้</a>
